@@ -1,9 +1,11 @@
 /* Программа-телеграф, которая принимает от пользователя сообщение 
    и выводит его на экран в виде последовательности точек и тире */
+
+#include "morse_encoder.h"
 #include <iostream>
 #include <string>
 #include <unordered_map>
-#include "morse_encoder.h"
+
 
 int main() {
     MorseEncoder encoder = nullptr;
