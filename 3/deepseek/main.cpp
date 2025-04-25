@@ -3,12 +3,13 @@
  * @brief Топологическая сортировка графа с использованием DFS
  */
 
+#include "graph.h"
+
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <stack>
 #include <algorithm>
-#include "graph.h"
 
 using namespace std;
 
@@ -18,9 +19,9 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    Graph graph;
+    Graph graph = nullptr;
     string filename = argv[1];
-    string error;
+    string error = "";
 
     if (!graph.loadFromFile(filename, error)) {
         cerr << "Error: " << error << endl;
