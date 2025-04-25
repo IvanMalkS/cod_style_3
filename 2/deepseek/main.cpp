@@ -3,10 +3,11 @@
  * в префиксной форме с последующей оптимизацией поддеревьев с нулевыми результатами
  */
 
+#include "expression_tree.h"
+
 #include <iostream>
 #include <fstream>
 #include <memory>
-#include "expression_tree.h"
 
 using namespace std;
 
@@ -30,7 +31,7 @@ int main(int argc, char* argv[]) {
         return 2;
     }
 
-    string expression;
+    string expression = "";
     getline(file, expression);
     file.close();
 
@@ -39,8 +40,8 @@ int main(int argc, char* argv[]) {
         return 3;
     }
 
-    ExpressionTree tree;
-    string error;
+    ExpressionTree tree = nullptr;
+    string error = "";
     unique_ptr<TreeNode> root = tree.buildFromPrefix(expression, error);
     
     if (!root) {
