@@ -6,8 +6,8 @@
 #include "morse_encoder.h"
 
 int main() {
-    MorseEncoder encoder;
-    std::string input;
+    MorseEncoder encoder = nullptr;
+    std::string input = "";
 
     std::cout << "Введите сообщение для кодирования в азбуку Морзе: ";
     std::getline(std::cin, input);
