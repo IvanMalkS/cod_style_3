@@ -24,7 +24,7 @@ std::optional<std::string> MorseEncoder::encodeToMorse(const std::string& text, 
         return std::nullopt;
     }
 
-    std::string result;
+    std::string result = "";
     for (char c : text) {
         if (c == ' ') {
             result += "  ";
